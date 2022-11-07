@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import useInput from './hooks/useInput';
 
 function App() {
+  
+  // This is duplicate ⛔
+  // const [title, setTitle] = useState('');
+  // const handleTitleChange = event => {
+  //   setTitle(event.target.value);
+  // }
+  
+  // const [description, setDescription] = useState('')
+  // const handleDescriptionChange = event =>{
+    //   setDescription(event.target.value);
+    // }
+       
+  const [title, handleTitleChange] = useInput();
+  const [description, handleDescriptionChange] = useInput();
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>My Custom hook example</h1>
+      <input
+      placeholder='title here'
+        value={title}
+        onChange={handleTitleChange} />
+      <input
+      placeholder='description here'
+        value={description}
+        onChange={handleDescriptionChange}/>
+      <button onClick={() =>{
+        console.log('title:', title)
+        console.log('description:', description)
+      }}>Show me the data</button>
     </div>
   );
 }
