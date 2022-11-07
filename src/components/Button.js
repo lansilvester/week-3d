@@ -7,11 +7,6 @@ const Button = ({text, handleClick}) => {
         console.log('Button has been rendered');
     });
 
-    // const handleClick = () => {
-    //     alert('I have been clicked!');
-    //     setCount(prev => prev +1);
-    //     // setCount(count + 1);
-    // }
     return (
         <button onClick={handleClick}>
             Click Me {text} {count}

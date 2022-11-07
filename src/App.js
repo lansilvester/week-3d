@@ -3,7 +3,6 @@ import './App.css';
 import useInput from './hooks/useInput';
 
 function App() {
-  
   // This is duplicate ⛔
   // const [title, setTitle] = useState('');
   // const handleTitleChange = event => {
@@ -21,7 +20,7 @@ function App() {
   return (
     <div>
       <h1>Version 2 of My App</h1>
-      
+
       <input
       placeholder='title here'
         value={title}
