@@ -20,7 +20,8 @@ function App() {
   
   return (
     <div>
-      <h1>My Custom hook example</h1>
+      <h1>Version 2 of My App</h1>
+      
       <input
       placeholder='title here'
         value={title}
